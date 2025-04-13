@@ -35,9 +35,12 @@ android {
     defaultConfig {
         applicationId = "com.example.installing_package"
         minSdkVersion 23  // تأكد أنه 23 أو أعلى
-        targetSdk = flutter.targetSdkVersion
-        versionCode = flutterVersionCode.toInteger()
-        versionName = flutterVersionName
+        targetSdkVersion 35  // أو حسب النسخة التي تعمل بها
+        versionCode 1
+        versionName "1.0"
+//        targetSdk = flutter.targetSdkVersion
+//        versionCode = flutterVersionCode.toInteger()
+//        versionName = flutterVersionName
     }
 
     buildTypes {
