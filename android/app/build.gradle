@@ -25,7 +25,7 @@ if (flutterVersionName == null) {
 
 android {
     namespace = "com.example.installing_package"
-    compileSdk = flutter.compileSdkVersion  // تأكد من أنه يستخدم SDK الخاص بـ Flutter
+    compileSdkVersion 33  // تأكد من استخدام SDK مناسب أو استخدم SDK الخاص بـ Flutter (يمكنك تحديد النسخة التي تريدها)
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
@@ -34,13 +34,11 @@ android {
 
     defaultConfig {
         applicationId = "com.example.installing_package"
-        minSdkVersion 23  // تأكد أنه 23 أو أعلى
-        targetSdkVersion 35  // أو حسب النسخة التي تعمل بها
-        versionCode 1
-        versionName "1.0"
-//        targetSdk = flutter.targetSdkVersion
-//        versionCode = flutterVersionCode.toInteger()
-//        versionName = flutterVersionName
+        minSdkVersion 23  // تأكد أنه 23 أو أعلى (يتوافق مع متطلبات Firebase)
+        targetSdkVersion 33  // استخدم النسخة المطلوبة أو كما في Flutter
+
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
     }
 
     buildTypes {
@@ -51,10 +49,8 @@ android {
 }
 
 flutter {
-    source = "../.."
+    source = "../.."  // تأكد أن المسار صحيح
 }
 
 // Firebase plugin
-apply plugin: 'com.google.gms.google-services'
-
-
+apply plugin: 'com.google.gms.google-services'  // Firebase plugin
