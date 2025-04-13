@@ -2,7 +2,6 @@ plugins {
     id "com.android.application"
     id "kotlin-android"
     id 'com.google.gms.google-services'
-
     id "dev.flutter.flutter-gradle-plugin"// Firebase plugin
 }
 
@@ -52,7 +51,3 @@ android {
 flutter {
     source = "../.."  // تأكد أن المسار صحيح
 }
-
-// Firebase plugin
-apply plugin: 'com.google.gms.google-services'  // Firebase plugin
-apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
